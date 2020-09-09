@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 const morgan = require("morgan");
 const helmet = require("helmet");
 const mongoose = require("mongoose");
@@ -10,7 +11,10 @@ const middlewares = require("./middlewares");
 const api = require("./api");
 
 const app = express();
-
+// app.use(express.static(path.join(__dirname, "build")));
+// app.get("/*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "build", "index.html"));
+// });
 mongoose.connect(
   "mongodb+srv://wonn:d72dadad@cluster0.j68pq.gcp.mongodb.net/ReactProjectTwitch?retryWrites=true&w=majority",
   {
