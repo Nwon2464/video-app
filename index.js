@@ -11,10 +11,7 @@ const middlewares = require("./middlewares");
 const api = require("./api");
 
 const app = express();
-app.use(express.static("public"))
-app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
-});
+
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -40,5 +37,16 @@ app.use("/api/v1", api);
 
 app.use(middlewares.notFound);
 app.use(middlewares.errorHandler);
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+  // app.get("/*", (req, res) => {
+  //   res.sendFile(path.join(__dirname, "public", "index.html"));
+  // });
+}
+
+app.listen(process.env.PORT || 5000, () => {
+  console.log(`Listening on ${process.env.PORT}...👀`);
+});
 
 module.exports = app;
