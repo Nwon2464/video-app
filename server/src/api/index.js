@@ -12,14 +12,14 @@ const router = express.Router();
 // });
 //secret = 9dlqnz21f080c13zbajb908m8n4mb4
 
-const client_id = "3v5apurywz4f102mixl63eb53q7z4h";
-const client_secret = "9dlqnz21f080c13zbajb908m8n4mb4";
+const client_id = process.env.CLIENT_ID;
+const client_secret = process.env.CLIENT_SECRET;
 // let token = [];
 
 router.get("/twitch", async (req, res) => {
   try {
     const response = await axios.post(
-      `https://id.twitch.tv/oauth2/token?client_id=${client_id}&client_secret=${client_secret}&grant_type=client_credentials`
+      `https://id.twitch.tv/oauth2/token?client_id=${client_id}&client_secret=${process.env.CLIENT_SECRET}&grant_type=client_credentials`
     );
     const token = response.data.access_token;
     const options = {
@@ -492,7 +492,7 @@ router.get("/twitch/minecraft", async (req, res) => {
       const newStreamsData = getStreamsRequest.data.data;
       // --------------------
       let allStreams = newStreamsData.slice();
-    
+
       let URL1 = `https://api.twitch.tv/helix/channels?broadcaster_id=${newStreamsData[0].user_id}`;
       let URL2 = `https://api.twitch.tv/helix/channels?broadcaster_id=${newStreamsData[1].user_id}`;
       let URL3 = `https://api.twitch.tv/helix/channels?broadcaster_id=${newStreamsData[2].user_id}`;
