@@ -29,12 +29,12 @@ const GameCard = (props) => {
                     </div>
 
                     <div className="app__ellipsis app__margin__top app__flex__shrink__1 app__flex__grow__1 app__color app__font__weight app__cursor">
-                      <Link className="app__font__size app__cursor">
+                      <Link to="/" className="app__font__size app__cursor">
                         {e.name}
                       </Link>
                     </div>
                     <p className="app__font__size">
-                      <Link className="app__cursor">
+                      <Link to="/" className="app__cursor">
                         {props.checkViewers(e.gameViewers)}
                       </Link>
                     </p>

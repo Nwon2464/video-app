@@ -14,7 +14,10 @@ const Loading = () => {
               .map((e, i) => {
                 return (
                   <>
-                    <div className="app__tower__300 app__tower__padding__gutter">
+                    <div
+                      key={i}
+                      className="app__tower__300 app__tower__padding__gutter"
+                    >
                       <div className="app__card__height">
                         <div className="app__card__padding_bottom app__card__height">
                           <article className="card__display__flex__direction">

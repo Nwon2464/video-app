@@ -17,7 +17,10 @@ const VideoCard = (props) => {
             {props.videos.slice(0, props.visible).map((e, i) => {
               return (
                 <>
-                  <div className="app__tower__300 app__tower__padding__gutter">
+                  <div
+                    key={i}
+                    className="app__tower__300 app__tower__padding__gutter"
+                  >
                     <div className="app__card__height">
                       <div className="app__card__padding_bottom app__card__height">
                         <article className="card__display__flex__direction">
@@ -27,7 +30,10 @@ const VideoCard = (props) => {
                                 <div className="app__margin__bottom">
                                   <div className="channel__font_1">
                                     <h3 className="app__ellipsis app__font__weight">
-                                      <Link className="app__font__size app__cursor">
+                                      <Link
+                                        to="/"
+                                        className="app__font__size app__cursor"
+                                      >
                                         {e.title}
                                       </Link>
                                     </h3>
@@ -36,14 +42,20 @@ const VideoCard = (props) => {
                                 <div className="channel__user">
                                   <div>
                                     <h4 className="app__ellipsis app__font__size__0_8 app__color__grey app__cursor">
-                                      <Link className="app__color__grey app__cursor app__font__size__0_8">
+                                      <Link
+                                        to="/"
+                                        className="app__color__grey app__cursor app__font__size__0_8"
+                                      >
                                         {e.user_name}
                                       </Link>
                                     </h4>
                                   </div>
                                   <div>
                                     <h5 className="app__ellipsis app__font__size__0_8">
-                                      <Link className="app__color__grey app__cursor app__font__size__0_8">
+                                      <Link
+                                        to="/"
+                                        className="app__color__grey app__cursor app__font__size__0_8"
+                                      >
                                         {e.game_name}
                                       </Link>
                                     </h5>
@@ -60,7 +72,7 @@ const VideoCard = (props) => {
                                 </div>
                               </div>
                               <div className="channel__icon">
-                                <Link>
+                                <Link to="/">
                                   <img
                                     className="channel__icon__1"
                                     src={e.profile_image_url}
@@ -75,7 +87,7 @@ const VideoCard = (props) => {
 
                           <div className="app__order__1">
                             <div className="app__relative app__cursor">
-                              <Link>
+                              <Link to="/">
                                 <div>
                                   <img
                                     className="channel__thumbnail"

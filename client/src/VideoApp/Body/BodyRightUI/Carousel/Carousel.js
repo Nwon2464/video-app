@@ -165,6 +165,7 @@ const Carousel = (props) => {
           {b.map((e, i) => {
             return (
               <Link
+              to="/"
                 style={{ marginLeft: 2, maxWidth: 90 }}
                 className="channel__tag__anchor"
                 key={i}
@@ -178,6 +179,7 @@ const Carousel = (props) => {
     }
     return (
       <Link
+      to="/"
         style={{ marginLeft: 2, maxWidth: 90 }}
         className="channel__tag__anchor"
       >
@@ -253,7 +255,7 @@ const Carousel = (props) => {
                   <div className="app__order__1 app__flex__start">
                     <div className="app__flex__grow__0 app__flex__shrink__0">
                       {" "}
-                      <Link className="">
+                      <Link to="/" className="">
                         <img
                           src={streams.profile_image_url}
                           alt="streamJPG"
@@ -265,7 +267,7 @@ const Carousel = (props) => {
                       <div className="app__margin__negative__bottom">
                         <div className="app__flex__start">
                           <h3 className="app__font__weight ">
-                            <Link className="app__font__color app__font__size__0_8">
+                            <Link to="/" className="app__font__color app__font__size__0_8">
                               {streams.user_name}
                             </Link>
                           </h3>
@@ -280,7 +282,7 @@ const Carousel = (props) => {
                       </div>
                       <div className="">
                         <h5>
-                          <Link className="app__font__7__color">
+                          <Link to="/" className="app__font__7__color">
                             {checkViewers(streams.viewer_count)}
                           </Link>
                         </h5>{" "}
@@ -293,7 +295,7 @@ const Carousel = (props) => {
                   </div>
                   <div style={{ width: "90%" }} className="app__order__3">
                     {/* image__card__bottom */}{" "}
-                    <Link>{streams.description}</Link>
+                    <Link to="/">{streams.description}</Link>
                   </div>
                 </div>
               </div>

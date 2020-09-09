@@ -211,6 +211,7 @@ const Body = (props) => {
         <ShowClickRender
           render={(visible, showClick) => (
             <VideoCard
+              key="videocard1"
               categories="Live Channel"
               videos={liveVideos}
               visible={visible}
@@ -225,6 +226,7 @@ const Body = (props) => {
         <LoadingGameCard />
       ) : (
         <GameCard
+          key="gamecard"
           topGames={topGames}
           checkViewers={checkViewers}
           categories="Categories"
@@ -236,6 +238,7 @@ const Body = (props) => {
         <ShowClickRender
           render={(visible, showClick) => (
             <VideoCard
+              key="videocard2"
               recommend="recommend"
               categories="Just Chat"
               videos={justChat}
@@ -253,6 +256,7 @@ const Body = (props) => {
         <ShowClickRender
           render={(visible, showClick) => (
             <VideoCard
+              key="videocard3"
               recommend="recommend"
               categories="Fortnite"
               showClick={showClick}
@@ -271,6 +275,7 @@ const Body = (props) => {
         <ShowClickRender
           render={(visible, showClick) => (
             <VideoCard
+              key="videocard4"
               recommend="recommend"
               categories="Minecraft"
               showClick={showClick}
@@ -288,6 +293,7 @@ const Body = (props) => {
         <ShowClickRender
           render={(visible, showClick) => (
             <VideoCard
+              key="videocard5"
               recommend="recommend"
               categories="Fall Guys"
               showClick={showClick}
