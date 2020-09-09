@@ -11,10 +11,10 @@ const middlewares = require("./middlewares");
 const api = require("./api");
 
 const app = express();
-// app.use(express.static("public"))
-// app.get("/*", (req, res) => {
-//   res.sendFile(path.join(__dirname, "public", "index.html"));
-// });
+app.use(express.static("public"))
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
