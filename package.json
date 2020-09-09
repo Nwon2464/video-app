@@ -6,7 +6,6 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "lint": "eslint --fix src",
     "test": "mocha --exit",
     "build": "cd client && npm run build",
     "install-client": "cd client && npm install",
@@ -29,9 +28,6 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "eslint": "^7.7.0",
-    "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "^2.22.0",
     "mocha": "^8.1.2",
     "nodemon": "^2.0.4",
     "supertest": "^4.0.2"
